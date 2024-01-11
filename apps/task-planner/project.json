@@ -1,7 +1,7 @@
 {
-  "name": "task-planner-poc",
+  "name": "task-planner",
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
-  "sourceRoot": "apps/task-planner-poc/src",
+  "sourceRoot": "apps/task-planner/src",
   "projectType": "application",
   "targets": {
     "build": {
@@ -24,15 +24,15 @@
       "executor": "@nx/vite:dev-server",
       "defaultConfiguration": "development",
       "options": {
-        "buildTarget": "task-planner-poc:build"
+        "buildTarget": "task-planner:build"
       },
       "configurations": {
         "development": {
-          "buildTarget": "task-planner-poc:build:development",
+          "buildTarget": "task-planner:build:development",
           "hmr": true
         },
         "production": {
-          "buildTarget": "task-planner-poc:build:production",
+          "buildTarget": "task-planner:build:production",
           "hmr": false
         }
       }
@@ -41,14 +41,14 @@
       "executor": "@nx/vite:preview-server",
       "defaultConfiguration": "development",
       "options": {
-        "buildTarget": "task-planner-poc:build"
+        "buildTarget": "task-planner:build"
       },
       "configurations": {
         "development": {
-          "buildTarget": "task-planner-poc:build:development"
+          "buildTarget": "task-planner:build:development"
         },
         "production": {
-          "buildTarget": "task-planner-poc:build:production"
+          "buildTarget": "task-planner:build:production"
         }
       }
     },
@@ -63,13 +63,13 @@
       "executor": "@nx/eslint:lint",
       "outputs": ["{options.outputFile}"],
       "options": {
-        "lintFilePatterns": ["apps/task-planner-poc/src"]
+        "lintFilePatterns": ["apps/task-planner/src"]
       }
     },
     "serve-static": {
       "executor": "@nx/web:file-server",
       "options": {
-        "buildTarget": "task-planner-poc:build"
+        "buildTarget": "task-planner:build"
       }
     }
   },

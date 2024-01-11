@@ -1,8 +1,8 @@
 {
-  "name": "e2e",
+  "name": "task-planner-e2e",
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
   "projectType": "application",
-  "sourceRoot": "apps/e2e/src",
+  "sourceRoot": "apps/task-planner-e2e/src",
   "targets": {
     "lint": {
       "executor": "@nx/eslint:lint",
@@ -11,20 +11,20 @@
     "e2e": {
       "executor": "@nx/cypress:cypress",
       "options": {
-        "cypressConfig": "apps/e2e/cypress.config.ts",
+        "cypressConfig": "apps/task-planner-e2e/cypress.config.ts",
         "testingType": "e2e",
-        "devServerTarget": "task-planner-poc:serve"
+        "devServerTarget": "task-planner:serve"
       },
       "configurations": {
         "production": {
-          "devServerTarget": "task-planner-poc:serve:production"
+          "devServerTarget": "task-planner:serve:production"
         },
         "ci": {
-          "devServerTarget": "task-planner-poc:serve-static"
+          "devServerTarget": "task-planner:serve-static"
         }
       }
     }
   },
-  "implicitDependencies": ["task-planner-poc"],
+  "implicitDependencies": ["task-planner"],
   "tags": []
 }
