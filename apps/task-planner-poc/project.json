@@ -1,7 +1,7 @@
 {
   "name": "task-planner-poc",
-  "$schema": "node_modules/nx/schemas/project-schema.json",
-  "sourceRoot": "./src",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "apps/task-planner-poc/src",
   "projectType": "application",
   "targets": {
     "build": {
@@ -63,7 +63,7 @@
       "executor": "@nx/eslint:lint",
       "outputs": ["{options.outputFile}"],
       "options": {
-        "lintFilePatterns": ["./src"]
+        "lintFilePatterns": ["apps/task-planner-poc/src"]
       }
     },
     "serve-static": {

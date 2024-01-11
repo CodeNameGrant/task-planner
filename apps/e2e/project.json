@@ -1,13 +1,17 @@
 {
   "name": "e2e",
-  "$schema": "../node_modules/nx/schemas/project-schema.json",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
   "projectType": "application",
-  "sourceRoot": "e2e/src",
+  "sourceRoot": "apps/e2e/src",
   "targets": {
+    "lint": {
+      "executor": "@nx/eslint:lint",
+      "outputs": ["{options.outputFile}"]
+    },
     "e2e": {
       "executor": "@nx/cypress:cypress",
       "options": {
-        "cypressConfig": "e2e/cypress.config.ts",
+        "cypressConfig": "apps/e2e/cypress.config.ts",
         "testingType": "e2e",
         "devServerTarget": "task-planner-poc:serve"
       },
@@ -19,10 +23,6 @@
           "devServerTarget": "task-planner-poc:serve-static"
         }
       }
-    },
-    "lint": {
-      "executor": "@nx/eslint:lint",
-      "outputs": ["{options.outputFile}"]
     }
   },
   "implicitDependencies": ["task-planner-poc"],
