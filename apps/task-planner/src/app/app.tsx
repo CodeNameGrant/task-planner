@@ -1,13 +1,15 @@
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
-import styles from './app.module.css';
-
-import NxWelcome from './nx-welcome';
+import { BrowserRouter } from 'react-router-dom';
+import { Page } from '../components';
+import { AppRoutes } from '../routes';
 
 export function App() {
   return (
-    <div>
-      <NxWelcome title="task-planner-poc" />
-    </div>
+    <BrowserRouter>
+      <Page>
+        <AppRoutes />
+      </Page>
+    </BrowserRouter>
   );
 }
 
