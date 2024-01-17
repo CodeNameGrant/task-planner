@@ -1,5 +1,11 @@
-import React from 'react';
+import { Heading } from '../../components';
 
 export function Tasks() {
-  return <div>Tasks</div>;
+  return (
+    <div className="space-y-2">
+      <Heading heading="Tasks" />
+
+      <div>Tasks Content</div>
+    </div>
+  );
 }
