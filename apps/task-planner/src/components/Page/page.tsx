@@ -8,9 +8,8 @@ export interface PageProps {
 
 export function Page({ children }: PageProps) {
   return (
-    <div className="w-4/5 outline outline-black mx-auto">
+    <div className="w-4/5 mx-auto">
       <Header />
-
       <main>{children}</main>
     </div>
   );
